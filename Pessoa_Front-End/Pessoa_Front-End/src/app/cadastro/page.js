@@ -47,7 +47,7 @@ export default function Cadastro() {
                 <input
                     type="number"
                     placeholder='Preço:'
-                    nome="preco"
+                    nome=""
                     onChange={e => setPreco(e.target.value)}
                 /><br/>
                       <input
