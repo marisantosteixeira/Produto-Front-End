@@ -16,20 +16,29 @@ export default async function Home() {
         <br></br> 
         <Link href="/cadastro" className={styles.voltarp} > CADASTRAR </Link>
         <br></br>
-        {produtos.map(produto => (
+        {produtos.map(produto => {
+
+          let date= new Date (produto.data_cadastro);
+          let dataCorreta = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+          return (
+          
           <div className={styles.produtos} key={produto.codigo}>
             <div>
-            <p className={styles.pproduto}>{produto.titulo}</p>
-            <p className={styles.pproduto}>{produto.data_cadastro}</p>
-            <p className={styles.pproduto}>{produto.preco}</p>
-            <p className={styles.pproduto}>{produto.descricao}</p>
+            <a className={styles.pproduto}> {produto.titulo}</a>
+            <br></br>
+            <a className={styles.pproduto}>{dataCorreta}</a>
+            <br></br>
+            <a className={styles.pproduto}> Preço: R$ {produto.preco}</a>
+            <br></br>
+            <a className={styles.pproduto}>Descrição: {produto.descricao}</a>
+            <br></br>
             <img className={styles.imgs} src={produto.imagem}/>
     
-            <Link href={`/produto/${produto.codigo}`} className={styles.verm} >ver mais</Link></div>
+            <Link href={`/produto/${produto.codigo}`} className={styles.verm} >Ver mais</Link></div>
           
-          </div>
+          </div>)
             
-        ))} 
+        })} 
       </main>
     </div>
   )

@@ -52,29 +52,30 @@
 
 .produtos{
   margin-top: 20px;
-  padding: 10px;
-  margin-left: 5px;
+  padding: 20px;
+  margin-left: 300px;
   display: grid;
   grid-template-columns: 200px 200px 200px;
   border: #660013 solid 3px;
-  width: 50%;
+  width: 70%;
+  
 }
 
 .imgs{
-  width: 120px;
+  width: 200px;
   margin-bottom: 20px;
 }
 
 .pproduto{
-  font-size: 20px;
-  padding: 25px;
+  font-size: 15px;
   color: white;
-  text-align: center  ;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  
 }
 
 .mainp{
   background-color: #FFB7C5;
-
 }
 
 .voltarp{
@@ -87,10 +88,11 @@
   margin-top: 20px;
   
 }
+
 .verm{
   border: 5px solid white ;
   border-radius: 15px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   padding: 12px;
 }

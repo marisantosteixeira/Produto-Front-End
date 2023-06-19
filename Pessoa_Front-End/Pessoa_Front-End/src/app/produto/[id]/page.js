@@ -2,7 +2,7 @@
 
 
 import { useRouter } from "next/navigation";
-
+import './produto.css'
 
 
 export default async function Produto({ params }) {
@@ -38,16 +38,19 @@ export default async function Produto({ params }) {
         }
     }
     return (
-        <div className="border-4 border-black">
-            <p>{produto.titulo}</p>
-            <p>{produto.data_cadastro}</p>
-            <p>{produto.preco}</p>
-            <p>{produto.descricao}</p>
+
+        <main className="main">
+        <div className="div">
+            <p className="p">{produto.titulo}</p>
+            <p className="p">{produto.data_cadastro}</p>
+            <p className="p">R${produto.preco}</p>
+            <p className="p">{produto.descricao}</p>
             <img scr={produto.imagem}/>
-            <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
+            <button onClick={e => e.preventDefault(remover())} className="botao">REMOVER</button>
 
 
         </div>
+        </main>
 
 
     )
