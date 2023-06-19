@@ -1,8 +1,84 @@
-
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
- }
- 
+  background-color: #FFB7C5;
+
+}
+
+.inputs{
+  font-size: 25px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: solid #af4054 3px;
+  text-decoration: none;
+}
+
+.inputs:hover{
+  border-color: #660013;
+  
+}
+
+.field{
+  border: 3px solid #660013;
+  padding: 30px;
+  
+}
+
+.ps{
+  margin-left: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.botao{
+  border: 5px solid white ;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 40px;
+  color: white;
+}
+
+.voltar{
+  border: 5px solid white ;
+  border-radius: 15px;
+  padding: 12px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.produtos{
+  border: 3px solid #660013;
+  margin-top: 20px;
+  display: inline-block;
+  grid-template-columns: 200px 200px 200px;
+  padding: 10px;
+}
+
+.imgs{
+  width: 120px;
+}
+
+.pproduto{
+  font-size: 20px;
+  padding: 25px;
+}
+
+.mainp{
+  background-color: #FFB7C5;
+
+}
+
+.voltarp{
+  border: 5px solid white ;
+  border-radius: 15px;
+  padding: 12px;
+  margin-left: 900px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  
+}

@@ -13,7 +13,7 @@ export default function Cadastro() {
 
     const cadastrar = (e) => {
         e.preventDefault()
-        
+       
         const produto = {
             titulo: titulo,
             data_cadastro: data_cadastro,
@@ -22,7 +22,7 @@ export default function Cadastro() {
             imagem: imagem
         }
         const produtoJson = JSON.stringify(produto);
-        fetch("http://localhost:3003/produto", {
+        fetch("http://localhost:3003/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
@@ -31,42 +31,32 @@ export default function Cadastro() {
 
     return (
         <div className={styles.main}>
-            <form  onSubmit={cadastrar}>
-                <input
-                    type="text"
-                    placeholder='Titulo:'
-                    nome="titulo"
-                    onChange={e => setTitulo(e.target.value)}
-                /><br/>
-                <input
-                    type="date"
-                    placeholder='Data de Cadastro:'
-                    nome="data_cadastro"
-                    onChange={e => setData_cadastro(e.target.value)}
-                /><br/>
-                <input
-                    type="number"
-                    placeholder='Preço:'
-                    nome=""
-                    onChange={e => setPreco(e.target.value)}
-                /><br/>
-                      <input
-                    type="text"
-                    placeholder='Descrição:'
-                    nome="descricao"
-                    onChange={e => setDescricao(e.target.value)}
-                /><br/>
-                      <input
-                    type="text"
-                    placeholder='Imagem:'
-                    nome="imagem"
-                    onChange={e => setImagem(e.target.value)}
-                /><br/>
-                <button type='submit'>Cadastrar</button>
+            <fieldset className={styles.field}><legend className={styles.ps}>PREENCHA OS DADOS ABAIXO</legend>
+                <form className={styles.form} onSubmit={cadastrar}>
+
                 <div>
-                    <a href='/'>Voltar</a>
-                </div>
-            </form>
+                    <input className={styles.inputs} type="text" placeholder='Titulo:'
+                    nome="titulo" onChange={e => setTitulo(e.target.value)}/>
+                    <br/>
+                    <input className={styles.inputs} type="date" placeholder='Data de Cadastro:' nome="data_cadastro"
+                    onChange={e => setData_cadastro(e.target.value)}/>
+                    <br/>
+                    <input className={styles.inputs} type="number"placeholder='Preço:' nome=""
+                    onChange={e => setPreco(e.target.value)}/>
+                    <br/>
+                    <input className={styles.inputs} type="text" placeholder='Descrição:' nome="descricao"
+                    onChange={e => setDescricao(e.target.value)}/>
+                    <br/>
+                    <input className={styles.inputs} type="text" placeholder='Imagem:'nome="imagem"
+                    onChange={e => setImagem(e.target.value)}/>
+                    <br/>
+                    <button type='submit' className={styles.botao}>Cadastrar</button>
+                    <a href='/' className={styles.voltar}>Voltar</a>
+                    </div>
+                </form>
+            </fieldset>
         </div>
+
+
     );
 }
