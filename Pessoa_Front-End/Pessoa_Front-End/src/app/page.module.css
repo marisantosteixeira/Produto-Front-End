@@ -51,15 +51,15 @@
 }
 
 .produtos{
-  border: 3px solid #660013;
   margin-top: 20px;
   display: inline-block;
-  grid-template-columns: 200px 200px 200px;
   padding: 10px;
+  margin-left: 5px ;
 }
 
 .imgs{
   width: 120px;
+  margin-bottom: 20px;
 }
 
 .pproduto{
@@ -81,4 +81,11 @@
   color: white;
   margin-top: 20px;
   
+}
+.verm{
+  border: 5px solid white ;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 20px;
+  padding: 12px;
 }

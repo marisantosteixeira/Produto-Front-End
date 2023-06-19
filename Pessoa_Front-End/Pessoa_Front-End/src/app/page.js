@@ -24,7 +24,7 @@ export default async function Home() {
             <p className={styles.pproduto}>{produto.descricao}</p>
             <img className={styles.imgs} src={produto.imagem}/>
     
-            <Link href={`/produto/${produto.codigo}`}>ver mais</Link>
+            <Link href={`/produto/${produto.codigo}`} className={styles.verm} >ver mais</Link>
           
           </div>
             
