@@ -18,13 +18,14 @@ export default async function Home() {
         <br></br>
         {produtos.map(produto => (
           <div className={styles.produtos} key={produto.codigo}>
+            <div>
             <p className={styles.pproduto}>{produto.titulo}</p>
             <p className={styles.pproduto}>{produto.data_cadastro}</p>
             <p className={styles.pproduto}>{produto.preco}</p>
             <p className={styles.pproduto}>{produto.descricao}</p>
             <img className={styles.imgs} src={produto.imagem}/>
     
-            <Link href={`/produto/${produto.codigo}`} className={styles.verm} >ver mais</Link>
+            <Link href={`/produto/${produto.codigo}`} className={styles.verm} >ver mais</Link></div>
           
           </div>
             
